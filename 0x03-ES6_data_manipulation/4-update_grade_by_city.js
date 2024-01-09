@@ -5,7 +5,7 @@ export default function updateStudentGradeByCity(arr, city, newGrades) {
     const newStudents = arr.map((item) => {
       if (studentsId.includes(item.id)) {
         const studentGrade = newGrades.filter(
-          (grade) => grade.studentId === item.id
+          (grade) => grade.studentId === item.id,
         );
         if (studentGrade.length > 0) {
           return { ...item, grade: studentGrade[0].grade };
